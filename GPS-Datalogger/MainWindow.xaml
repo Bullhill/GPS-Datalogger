@@ -1,0 +1,68 @@
+﻿<Window x:Class="GPS_Datalogger.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GPS_Datalogger"
+        xmlns:ScottPlot="clr-namespace:ScottPlot.WPF;assembly=ScottPlot.WPF"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="210"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="100"/>
+                <ColumnDefinition Width="200"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="20"/>
+                <RowDefinition Height="20"/>
+                <RowDefinition Height="20"/>
+                <RowDefinition Height="20"/>
+                <RowDefinition Height="20"/>
+                <RowDefinition Height="20"/>
+                <RowDefinition Height="20"/>
+                <RowDefinition Height="20"/>
+                <RowDefinition Height="20"/>
+                <RowDefinition Height="20"/>
+            </Grid.RowDefinitions>
+
+            <TextBox Grid.Row="0" Grid.Column="0">Time:</TextBox>
+            <TextBox Grid.Row="0" Grid.Column="1" x:Name="Time"></TextBox>
+
+            <TextBox Grid.Row="1" Grid.Column="0">System Time:</TextBox>
+            <TextBox Grid.Row="1" Grid.Column="1" x:Name="SystemTime"></TextBox>
+
+            <TextBox Grid.Row="2" Grid.Column="0">Latitude</TextBox>
+            <TextBox Grid.Row="2" Grid.Column="1" x:Name="Latitude"></TextBox>
+
+            <TextBox Grid.Row="3" Grid.Column="0">Longitude</TextBox>
+            <TextBox Grid.Row="3" Grid.Column="1" x:Name="Longitude"></TextBox>
+
+            <TextBox Grid.Row="4" Grid.Column="0">QualityIndicator</TextBox>
+            <TextBox Grid.Row="4" Grid.Column="1" x:Name="QualityIndicator"></TextBox>
+
+            <TextBox Grid.Row="5" Grid.Column="0">Satelites</TextBox>
+            <TextBox Grid.Row="5" Grid.Column="1" x:Name="Satelites"></TextBox>
+
+            <TextBox Grid.Row="6" Grid.Column="0">Altitude</TextBox>
+            <TextBox Grid.Row="6" Grid.Column="1" x:Name="Altitude"></TextBox>
+
+            <TextBox Grid.Row="7" Grid.Column="0">SpeedKnots</TextBox>
+            <TextBox Grid.Row="7" Grid.Column="1" x:Name="SpeedKnots"></TextBox>
+
+            <TextBox Grid.Row="8" Grid.Column="0">IMU Heading</TextBox>
+            <TextBox Grid.Row="8" Grid.Column="1" x:Name="IMUHeading"></TextBox>
+
+            <TextBox Grid.Row="9" Grid.Column="0">IMU Roll</TextBox>
+            <TextBox Grid.Row="9" Grid.Column="1" x:Name="IMURoll"></TextBox>
+        </Grid>
+        <Grid Grid.Row="1">
+            <ScottPlot:WpfPlot x:Name="LineChart" />
+        </Grid>
+    </Grid>
+</Window>
